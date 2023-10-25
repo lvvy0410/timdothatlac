@@ -1,0 +1,178 @@
+/* thiết lập style cho slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* ẩn hình ảnh cho phần tử slideshow */
+.mySlides {
+    display: none;
+}
+
+/* thiết kế nút mũi tên*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Thiết lập style cho số hiển thị của phần tử */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* thiết lập style  nút tròn điều khiển*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* tạo hiệu ứng chuyển động fade */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*=========================================================================*/
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.thumbnail {
+    height: 192px;
+}
+
+/*=========================================================================*/
+.reposts {
+    font-size: 25px;
+    float: right;
+    display: inline;
+    width: 20%;
+    padding-left: 30px;
+}
+
+/* .repost-1 {}
+
+.repost-2 {}*/
+
+.repost-1-a:hover {
+    color: #2eb5cc;
+}
+
+.repost-1-b {
+    font-size: 28px;
+    margin-left: 20px;
+}
+
+/*==============================================================================*/
+/* Dùng trong <div> để định vị nội dung thả xuống */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nội dung thả xuống (Ẩn theo mặc định) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Liên kết bên trong danh sách thả xuống */
+.dropdown-content a {
+    color: gray;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: serif;
+}
+
+/* Thay đổi định dạng của liên kết thả xuống khi di chuột qua */
+.dropdown-content a:hover {
+    background-color: #b3b4b7;
+    color: white;
+}
+
+/* Hiển thị menu thả xuống khi di chuột */
+.dropdown:hover .dropdown-content {
+    display: block;
+    right: 0;
+}
