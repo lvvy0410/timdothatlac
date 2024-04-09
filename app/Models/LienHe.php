@@ -11,7 +11,7 @@ class LienHe extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'trang_thai_bai_dang';
+    protected $table = 'bai_dang_report';
 
     protected $fillable = [
         'ten_nguoi_lien_he',

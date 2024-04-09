@@ -40,8 +40,7 @@ class UserController extends Controller
         }
         $user = Auth::id();
         $baiDang = BaiDang::create([
-            // 'loai_do_vat_id' => $request->loai_do_vat,
-            'loai_do_vat_id' => 1,
+            'loai_do_vat_id' => $request->loai_do_vat,
             'nguoi_dung_id' => $user,
             'loai' => $request->loai_tin,
             'tieu_de' => $request->tieu_de,

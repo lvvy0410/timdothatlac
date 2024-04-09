@@ -37,8 +37,8 @@ class CreateBaiDangTable extends Migration
             $table->foreign('nguoi_dung_id')->references('id')->on('nguoi_dung');
         });
         Schema::table('bai_dang', function (Blueprint $table) {
-            $table->unsignedBigInteger('trang_thai_bai_dang_id')->nullable();
-            $table->foreign('trang_thai_bai_dang_id')->references('id')->on('trang_thai_bai_dang');
+            $table->unsignedBigInteger('bai_dang_report_id')->nullable();
+            $table->foreign('bai_dang_report_id')->references('id')->on('bai_dang_report');
         });
     }
 
