@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrangThaiBaiDangTable extends Migration
+class CreateLienHeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTrangThaiBaiDangTable extends Migration
      */
     public function up()
     {
-        Schema::create('lien-he', function (Blueprint $table) {
+        Schema::create('lien_he', function (Blueprint $table) {
             $table->id();
             $table->string('ten_nguoi_lien_he');
             $table->string('email');

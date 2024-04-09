@@ -79,71 +79,71 @@ https://templatemo.com/tm-556-catalog-z
             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
                 <!-- /*=========COPY============*/ -->
                 <div class="display-container">
-                        <?php
-                        $item = explode('|', $lsDangBai->anh);
-                        if (count($item) > 1) {
-                            foreach (explode('|', $lsDangBai->anh) as $img) {
-                        ?>
-                                <img class="mySlides" src="/images/{{ $img }}">
-                            <?php
-                            }
-                            ?>
-                            <button class="image-button button-left" onclick="plusSlides(-1)">&#10094;</button>
-                            <button class="image-button button-right" onclick="plusSlides(1)">&#10095;</button>
-                            <?php
-                        } else {
-                            foreach (explode('|', $lsDangBai->anh) as $img) {
-                            ?>
-                                <img class="mySlides" src="/images/{{ $img }}">
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                    <div style="text-align:center">
-                        <?php
-                        for ($i = 1; $i <= count($item); $i++) {
-                        ?>
-                            <span class="dot" onclick="currentSlide(<?php echo $i; ?>)"></span>
+                    <?php
+                    $item = explode('|', $lsDangBai->anh);
+                    if (count($item) > 1) {
+                        foreach (explode('|', $lsDangBai->anh) as $img) {
+                    ?>
+                            <img class="mySlides" src="/images/{{ $img }}">
                         <?php
                         }
                         ?>
-                    </div>
+                        <button class="image-button button-left" onclick="plusSlides(-1)">&#10094;</button>
+                        <button class="image-button button-right" onclick="plusSlides(1)">&#10095;</button>
+                        <?php
+                    } else {
+                        foreach (explode('|', $lsDangBai->anh) as $img) {
+                        ?>
+                            <img class="mySlides" src="/images/{{ $img }}">
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+                <div style="text-align:center">
+                    <?php
+                    for ($i = 1; $i <= count($item); $i++) {
+                    ?>
+                        <span class="dot" onclick="currentSlide(<?php echo $i; ?>)"></span>
+                    <?php
+                    }
+                    ?>
+                </div>
                 <!-- /*=========COPY============*/ -->
             </div>
             <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                 <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Bạn cần phải đăng nhập để sử dụng chức năng này. Bạn có muốn đăng nhập không?</h5>
-                                    
-                                </div>
-                                <form action="{{ route('dang-nhap') }}">
-                                    <input type="hidden" name="dang_bai" value="{{ $lsDangBai->id }}">
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                                        <button type="submit" class="btn btn-info">Đăng nhập</button>
-                                    </div>
-                                </form>
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Bạn cần phải đăng nhập để sử dụng chức năng này. Bạn có muốn đăng nhập không?</h5>
+
                             </div>
+                            <form action="{{ route('dang-nhap') }}">
+                                <input type="hidden" name="dang_bai" value="{{ $lsDangBai->id }}">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                                    <button type="submit" class="btn btn-info">Đăng nhập</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
+                </div>
 
-                    <div class="tm-text-gray-dark reposts">
-                        <span class="repost-1">
-                            <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v repost-1-a tm-text-gray-dark"></i></a>
-                            <div class="dropdown-menu">
-                                <!-- //======================================Chỉnh sửa===================================== -->
-                                <button type="button" class="tm-text-primary dropdown-item" data-toggle="modal" data-target="#exampleModalCenters"><i class="fa fa-plus-square"> Theo dõi</i></button>
-                                <button type="button" class="tm-text-primary dropdown-item" data-toggle="modal" data-target="#exampleModalCenters"><i class="fa fa-minus-circle"> Báo cáo</i></button>                                                                                             
-                                <!-- //======================================Chỉnh sửa===================================== -->
-                            </div>
-                        </span>
-                        <span class="repost-2">
-                            <a onclick="quay_lai_trang_truoc()" class="tm-text-gray-dark" data-toggle="tooltip" data-placement="bottom" title="Thoát trang chi tiết"><i class="fa fa-times repost-1-b"></i></a>
-                        </span>
-                    </div>
+                <div class="tm-text-gray-dark reposts">
+                    <span class="repost-1">
+                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v repost-1-a tm-text-gray-dark"></i></a>
+                        <div class="dropdown-menu">
+                            <!-- //======================================Chỉnh sửa===================================== -->
+                            <button type="button" class="tm-text-primary dropdown-item" data-toggle="modal" data-target="#exampleModalCenters"><i class="fa fa-plus-square"> Theo dõi</i></button>
+                            <button type="button" class="tm-text-primary dropdown-item" data-toggle="modal" data-target="#exampleModalCenters"><i class="fa fa-minus-circle"> Báo cáo</i></button>
+                            <!-- //======================================Chỉnh sửa===================================== -->
+                        </div>
+                    </span>
+                    <span class="repost-2">
+                        <a onclick="quay_lai_trang_truoc()" class="tm-text-gray-dark" data-toggle="tooltip" data-placement="bottom" title="Thoát trang chi tiết"><i class="fa fa-times repost-1-b"></i></a>
+                    </span>
+                </div>
                 <div class="tm-bg-gray tm-video-details">
                     <div class="mb-4">
                         <h4 class="tm-text-gray-dark mb-3">
@@ -189,7 +189,7 @@ https://templatemo.com/tm-556-catalog-z
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div> <!-- container-fluid, tm-container-content -->
 
@@ -255,11 +255,11 @@ https://templatemo.com/tm-556-catalog-z
             $('body').addClass('loaded');
         });
     </script>
-     <script>
-      function quay_lai_trang_truoc(){
-          history.back();
-      }
-  </script>
+    <script>
+        function quay_lai_trang_truoc() {
+            history.back();
+        }
+    </script>
 </body>
 
 </html>

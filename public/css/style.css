@@ -8,6 +8,7 @@
 /* ẩn hình ảnh cho phần tử slideshow */
 .mySlides {
     display: none;
+    object-fit: cover;
 }
 
 /* thiết kế nút mũi tên*/

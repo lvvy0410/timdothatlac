@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="{{ asset('/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/templatemo-style.css') }}">
 
+    <style>
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
@@ -53,7 +71,7 @@
                             <img src="{{asset('images/img.jpg')}}" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            <span>Welcome,</span>
+                            <span>Xin chào,</span>
                             <h2>{{Auth::user()->ten}}</h2>
                         </div>
                     </div>
@@ -279,8 +297,8 @@
                                     <?php
                                     }
                                     ?>
-                                    <button class="image-button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                                    <button class="image-button button-right" onclick="plusDivs(1)">&#10095;</button>
+                                    <button class="image-button button-left" onclick="plusSlides(-1)">&#10094;</button>
+                                    <button class="image-button button-right" onclick="plusSlides(1)">&#10095;</button>
                                     <?php
                                 } else {
                                     foreach (explode('|', $lsDangBai->anh) as $img) {
@@ -288,6 +306,15 @@
                                         <img class="mySlides" src="/images/{{ $img }}">
                                 <?php
                                     }
+                                }
+                                ?>
+                            </div>
+                            <div style="text-align:center">
+                                <?php
+                                for ($i = 1; $i <= count($item); $i++) {
+                                ?>
+                                    <span class="dot" onclick="currentSlide(<?php echo $i; ?>)"></span>
+                                <?php
                                 }
                                 ?>
                             </div>

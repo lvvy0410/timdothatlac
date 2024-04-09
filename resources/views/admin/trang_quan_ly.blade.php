@@ -46,9 +46,9 @@
 
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
-                        <!-- <div class="profile_pic">
+                        <div class="profile_pic">
                             <img src="{{asset('images/img.jpg')}}" alt="..." class="img-circle profile_img">
-                        </div> -->
+                        </div>
                         <div class="profile_info">
                             <span>Xin chào,</span>
                             <h2>{{Auth::user()->ten}}</h2>
@@ -170,7 +170,7 @@
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                    <!-- <img src="{{asset('images/img.jpg')}}" alt=""> -->{{Auth::user()->ten}}
+                                    <img src="{{asset('images/img.jpg')}}" alt="">{{Auth::user()->ten}}
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('admin-ho-so') }}"> Hồ sơ</a>

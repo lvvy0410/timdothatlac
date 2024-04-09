@@ -29,7 +29,15 @@ https://templatemo.com/tm-556-catalog-z
     </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{route('trang-chu')}}">
+            <a class="navbar-brand" href="
+            <?php
+            if (Auth::user() != null) {
+                echo route('user-trang-chu');
+            } else {
+                echo route('trang-chu');
+            }
+            ?>
+            ">
                 <i class="fas fa-film mr-2"></i>
                 timdoVTS.com
             </a>
@@ -39,8 +47,16 @@ https://templatemo.com/tm-556-catalog-z
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-1 active" aria-current="page" href="{{route('trang-chu')}}">Trang
-                            Chủ</a>
+                        <a class="nav-link nav-link-1 active" aria-current="page" href="
+                        <?php
+                        if (Auth::user() != null) {
+                            echo route('user-trang-chu');
+                        } else {
+                            echo route('trang-chu');
+                        }
+                        ?>
+                        ">
+                            Trang Chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-2" href="{{route('dang-nhap')}}">Đăng Bài</a>
@@ -99,7 +115,7 @@ https://templatemo.com/tm-556-catalog-z
                     <!-- <img src="/images/ " alt="Image" class="img-fluid2"> -->
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>{{ $data->tieu_de }}</h2>
-                        <a href="{{ route('chi-tiet-bai-dang',['id' => $data->id]) }}">View more</a>
+                        <a href="{{ route('chi-tiet-bai-dang', ['id' => $data->id]) }}">View more</a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -139,7 +155,15 @@ https://templatemo.com/tm-556-catalog-z
                     <h3 class="tm-text-primary mb-4 tm-footer-title">Giới thiệu trang Tìm Đồ Thất Lạc</h3>
                     <h6>Đã bao giờ bạn bị rơi ví, mất giấy tờ, thất lạc thú cưng yêu quý của bạn chưa?</h6>
                     <p>Nếu đã từng lâm vào hoàn cảnh như vậy thì chắc chắn mọi người sẽ tìm cách để tìm lại những thứ mình bị mất.
-                        Trang web <a rel="sponsored" href="{{route('trang-chu')}}">timdoVTS.com</a> được sinh ra để làm điều đó. </p>
+                        Trang web <a rel="sponsored" href="
+                        <?php
+                        if (Auth::user() != null) {
+                            echo route('user-trang-chu');
+                        } else {
+                            echo route('trang-chu');
+                        }
+                        ?>
+            ">timdoVTS.com</a> được sinh ra để làm điều đó. </p>
                     <p>Tại đây mọi người có thể :
 
                     <div>- Đăng tin tìm đồ, nhặt được đồ.</div>
