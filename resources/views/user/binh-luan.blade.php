@@ -2,7 +2,7 @@
 
 <div class="display-comment" @if($comment->parent_id != null) style="margin-left:40px;" @endif>
     <div class="pb-3 tm-text-gray" style="border: solid;border-width: 1px; border-radius: 10px;">
-        <div class="col-xl-10 col-lg-5 col-md-6 col-sm-12 " style="padding-left: 10px;">
+        <div class="col-xl-10 col-lg-5 col-md-6 col-sm-12 " style="padding-left: 10px;  float: none;">
 
             <h5 style=" color: black; display: inline;">{{ $comment->user->ten }}</h5>
             <p style="display: inline;"><?php $day = date_create($comment->thoi_gian);
