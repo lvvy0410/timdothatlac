@@ -375,6 +375,39 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="tm-bg-gray pt-1 pb-3 tm-text-gray " style="border: solid;border-width: 1px; border-radius: 0px 0px 10px 10px;">
+
+                            <form id="form_input" class="them-binh-luan" method="post" action="{{ route('user-binh-luan') }}" style="padding: 20px;">
+                                @csrf
+                                <h3>BÌNH LUẬN</h3>
+                                <div class=" tm-bg-gray pt-5 pb-3 tm-text-gray" style="border-top: solid; border-bottom: solid; border-width: 3px; ">
+
+                                    <div class="form-group">
+                                        <input id="noi_dung" class="form-control" style="height: 50px; width: 1000px;display: inline;border-radius:50px;border: solid;border-width: 1px;" name="noi_dung" placeholder="Viết bình luận... " />
+                                        <input type=hidden name=bai_dang_id value="{{ $lsDangBai->id }}" />
+                                        <button style="display: inline; height: 50px;width: 100px;border-radius:10px;" type=submit class="btn btn-success">Thêm</button>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                            <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+                            </div>
+
+                            <div class="col-xl-8 col-lg-5 col-md-8 col-sm-12" style="overflow-y: auto; width:100%; height: 500px; max-width: 100%;">
+                                <div class="tm-bg-gray tm-video-details">
+
+
+                                    @include('user\binh-luan', ['comments' => $lsDangBai->comments, 'bai_dang_id' => $lsDangBai->id])
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
                     </div>
                     <br>
 

@@ -203,11 +203,7 @@ https://templatemo.com/tm-556-catalog-z
                                 <form action="{{ route('user-chinh-sua-bai-dang',['id' => $lsDangBai->id]) }}" method="get">
                                     <button class="tm-text-primary dropdown-item"><i class="fa fa-edit"> Chỉnh sửa</i></button>
                                 </form>
-
                                 <button href="{{ route('user-xoa-bai-dang',['id' => $lsDangBai->id]) }}" class=" tm-text-primary dropdown-item user-btn-del"><i class="fa fa-trash"> Xóa </i></button>
-
-
-
                                 @endif
                                 <!-- //======================================Chỉnh sửa===================================== -->
                             </div>
@@ -217,15 +213,12 @@ https://templatemo.com/tm-556-catalog-z
                         </span>
                     </div>
                     <!-- COPY -->
-
                     <div class="tm-bg-gray tm-video-details">
-
                         <div class="mb-4">
                             <h4 class="tm-text-gray-dark mb-3">
                                 Người đăng: <a style="color: black;">{{ $lsDangBai->nguoiDang->ten }}</a>
                             </h4>
                         </div>
-
                         <div>
                             <h4 class="tm-text-gray-dark mb-3">Loại tin:
                                 @if($lsDangBai->loai == 0)
@@ -245,8 +238,6 @@ https://templatemo.com/tm-556-catalog-z
                                 ?>
                             </h4>
                         </div>
-
-
                         <div class="mb-4 d-flex flex-wrap">
                             <h4 class="tm-text-gray-dark mb-3">
                                 Thời gian: <span class="tm-text-primary"><?php $day = date_create($lsDangBai->thoi_gian);
@@ -270,31 +261,22 @@ https://templatemo.com/tm-556-catalog-z
             </div>
 
             <!-- start accordion -->
-
             <div class="tm-bg-gray pt-1 pb-3 tm-text-gray " style="border: solid;border-width: 1px; border-radius: 0px 0px 10px 10px;">
-
                 <form id="form_input" class="them-binh-luan" method="post" action="{{ route('user-binh-luan') }}" style="padding: 20px;">
                     @csrf
                     <h3>BÌNH LUẬN</h3>
                     <div class=" tm-bg-gray pt-5 pb-3 tm-text-gray" style="border-top: solid; border-bottom: solid; border-width: 3px; ">
-
                         <div class="form-group">
                             <input id="noi_dung" class="form-control" style="height: 50px; width: 1000px;display: inline;border-radius:50px;border: solid;border-width: 1px;" name="noi_dung" placeholder="Viết bình luận... " />
                             <input type=hidden name=bai_dang_id value="{{ $lsDangBai->id }}" />
                             <button style="display: inline; height: 50px;width: 100px;border-radius:10px;" type=submit class="btn btn-success">Thêm</button>
                         </div>
-
                     </div>
-
                 </form>
-
-                <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+                <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12" >
                 </div>
-
                 <div class="col-xl-8 col-lg-5 col-md-8 col-sm-12" style="overflow-y: auto; width:100%; height: 500px;">
                     <div class="tm-bg-gray tm-video-details">
-
-
                         @include('user\binh-luan', ['comments' => $lsDangBai->comments, 'bai_dang_id' => $lsDangBai->id])
 
                     </div>

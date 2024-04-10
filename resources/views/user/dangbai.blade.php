@@ -114,14 +114,9 @@ https://templatemo.com/tm-556-catalog-z
                     <h2 class="tm-text-primary mb-5">Đăng Tin Mới</h2>
                 </div>
                 <div class="col-lg-4 col-12 mb-5" id="content">
-
-                    <!-- <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto"> -->
-                    <!-- Thông tin đăng bài -->
                     <div class="form-group">
                         <h5>Tiêu Đề<code> *</code></h5>
-                        <!-- /*=========COPY============*/ -->
                         <textarea rows="8" style="height: 50px;" name="tieu_de" class="form-control rounded-0 khung" id="wi-he" placeholder="Tiêu đề: " required=""></textarea>
-                        <!-- /*=========COPY============*/ -->
                     </div>
                     <div class="form-group">
                         <select style="display: inline;" class="form-control" id="contact-select" name="loai_tin" required="">
@@ -150,7 +145,6 @@ https://templatemo.com/tm-556-catalog-z
                         <h5>Số Điện Thoại</h5>
                         <input class="form-control" type="text" name="so_dien_thoai">
                     </div>
-                    <!-- </form> -->
                 </div>
 
                 <div class="col-lg-4 col-12 mb-5" id="content-1">
@@ -163,130 +157,29 @@ https://templatemo.com/tm-556-catalog-z
                         </div>
                         <div class="form-group">
                             <input class="form-control" type="text" name="quan_huyen" placeholder="Quận/Huyện">
-                        </div>
+                        </div>ss
                         <div class="form-group">
                             <input class="form-control" type="text" name="phuong_xa" placeholder="Phường/Xã">
                         </div>
-                        <!-- <div class="form-group">
-                        <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
-                    </div> 
-                    <div class="form-group">
-                        <select class="form-control" id="contact-select" name="inquiry">
-                            <option value="-">Subject</option>
-                            <option value="sales">Sales &amp; Marketing</option>
-                            <option value="creative">Creative Design</option>
-                            <option value="uiux">UI / UX</option>
-                        </select>
-                    </div>-->
                         <div class="form-group">
                             <h5>Nội Dung<code> *</code></h5>
-                            <!-- /*=========COPY============*/ -->
                             <textarea rows="8" style="height: 50px;" name="noi_dung" class="form-control rounded-0 khung" placeholder="Nội dung" required=""></textarea>
-                            <!-- /*=========COPY============*/ -->
                         </div>
                         <div class="form-group tm-text-right" id="button">
                             <button type="submit" class="btn btn-primary">Đăng Bài</button>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-12"> -->
-                <!-- Map  -->
-                <!-- <div class="mapouter mb-4">
-                        <div class="gmap-canvas"> -->
                 <div id="content-2">
                     <h5>Chọn hình</h5>
                     <img src="" alt="" id="image" width="250px" height="250px">
                     <input type="file" id="imageFile" name="image[]" multiple onchange="chooseFile(this)" accept="image/gif, image/jpeg, image/png, image/jpg">
                 </div>
-                <!-- </div> -->
-                <!-- </div> -->
-                <!-- </div> -->
-
-
             </form>
         </div>
-        <!-- </div> -->
     </div>
-
-    <!-- <div class="col-lg-4 col-12">
-                <h2 class="tm-text-primary mb-5">Our Location</h2>
-                <!-- Map 
-                <div class="mapouter mb-4">
-                    <div class="gmap-canvas">
-                        <iframe width="100%" height="520" id="gmap-canvas"
-                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
-            </div> -->
-
-
     </div>
-    <!-- <div class="row tm-mb-74 tm-people-row">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-            <img src="{{asset('img/people-1.jpg')}}" alt="Image" class="mb-4 img-fluid">
-            <h2 class="tm-text-primary mb-4">Ryan White</h2>
-            <h3 class="tm-text-secondary h5 mb-4">Chief Executive Officer</h3>
-            <p class="mb-4">
-                Mauris ante tellus, feugiat nec metus non, bibendum semper velit. Praesent laoreet urna id tristique
-                fermentum. Morbi venenatis dui quis diam mollis pellentesque.
-            </p>
-            <ul class="tm-social pl-0 mb-0">
-                <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-            <img src="{{asset('img/people-2.jpg')}}" alt="Image" class="mb-4 img-fluid">
-            <h2 class="tm-text-primary mb-4">Catherine Pinky</h2>
-            <h3 class="tm-text-secondary h5 mb-4">Chief Marketing Officer</h3>
-            <p class="mb-4">
-                Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend.
-                Quisque ut eleifend lacus.
-            </p>
-            <ul class="tm-social pl-0 mb-0">
-                <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-            <img src="{{asset('img/people-3.jpg')}}" alt="Image" class="mb-4 img-fluid">
-            <h2 class="tm-text-primary mb-4">Johnny Brief</h2>
-            <h3 class="tm-text-secondary h5 mb-4">Accounting Executive</h3>
-            <p class="mb-4">
-                Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend.
-                Quisque ut eleifend lacus.
-            </p>
-            <ul class="tm-social pl-0 mb-0">
-                <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-            <img src="{{asset('img/people-4.jpg')}}" alt="Image" class="mb-4 img-fluid">
-            <h2 class="tm-text-primary mb-4">George Nelson</h2>
-            <h3 class="tm-text-secondary h5 mb-4">Creative Art Director #C69</h3>
-            <p class="mb-4">
-                Nunc convallis facilisis congue. Curabitur gravida rutrum justo sed pulvinar. Pellentesque ac ante
-                in erat bibendum dignissim.
-            </p>
-            <ul class="tm-social pl-0 mb-0">
-                <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div> -->
-    </div> <!-- container-fluid, tm-container-content -->
+    </div>
 
     <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
         <div class="container-fluid tm-container-small">
@@ -319,7 +212,6 @@ https://templatemo.com/tm-556-catalog-z
                             <li><a href="{{ route('user-lien-he') }}">form</a></li>
                         </ul>
                     </ul>
-
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
@@ -328,8 +220,6 @@ https://templatemo.com/tm-556-catalog-z
                         <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
                         <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
                     </ul>
-                    <!-- <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
-                    <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a> -->
                 </div>
             </div>
             <div class="row">
