@@ -118,7 +118,9 @@ class UserController extends Controller
     {
 
         $lsUser = NguoiDung::all();
-        $lsDangBai = BaiDang::select('bai_dang.*', 'loai_do_vat.ten')->join('loai_do_vat', 'bai_dang.loai_do_vat_id', '=', 'loai_do_vat.id')->where('tieu_de', 'like', '%' . $request->tim_kiem . '%')
+        $lsDangBai = BaiDang::select('bai_dang.*', 'loai_do_vat.ten')
+            ->join('loai_do_vat', 'bai_dang.loai_do_vat_id', '=', 'loai_do_vat.id')
+            ->where('tieu_de', 'like', '%' . $request->tim_kiem . '%')
             ->orWhere('loai_do_vat.ten', 'like', '%' . $request->tim_kiem . '%')
             ->orWhere('tinh_tp', 'like', '%' . $request->tim_kiem . '%')
             ->orWhere('quan_huyen', 'like', '%' . $request->tim_kiem . '%')

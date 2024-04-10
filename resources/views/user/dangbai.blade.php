@@ -129,9 +129,9 @@ https://templatemo.com/tm-556-catalog-z
                     <div class="form-group">
                         <select style="display: inline;" class="form-control" id="contact-select" name="loai_do_vat">
                             <option value="">Chọn loại đồ vật</option>
-                            <!-- @foreach($lsLoaiDoVat as $loaiDoVat)
+                            @foreach($lsLoaiDoVat as $loaiDoVat)
                             <option value="{{ $loaiDoVat->id }}"> {{$loaiDoVat->ten}}</option>
-                            @endforeach -->
+                            @endforeach
                         </select>
                         <code>*</code>
                     </div>
