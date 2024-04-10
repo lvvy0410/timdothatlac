@@ -8,14 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
-
     <title>Tìm đồ thất lạc </title>
     <!-- <link rel="stylesheet" href="{{ asset('/css/style.css') }}"> -->
 
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/templatemo-style.css') }}">
-
     <style>
         .dot {
             cursor: pointer;
@@ -62,9 +60,7 @@
                     <div class="navbar nav_title" style="border: 0;">
                         <a href="{{ route('admin-trang-quan-ly') }}" class="site_title"><i class="fa fa-paw"></i> <span>Tìm đồ thất lạc</span></a>
                     </div>
-
                     <div class="clearfix"></div>
-
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
@@ -76,9 +72,7 @@
                         </div>
                     </div>
                     <!-- /menu profile quick info -->
-
                     <br />
-
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
@@ -177,10 +171,6 @@
                 </div>
             </div>
 
-
-
-
-
             <!-- top navigation -->
             <div class="top_nav">
                 <div class="nav_menu">
@@ -272,10 +262,8 @@
             <!-- /top navigation -->
 
             <!-- page content -->
-
             <div class="right_col" role="main">
                 <div class="">
-
                     <div class="clearfix"></div>
                     <div class="tm-text-gray-dark reposts">
                         <span class="repost-2">
@@ -284,10 +272,7 @@
                     </div>
                     <div class="row tm-mb-90">
                         <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                            <!-- /*=========COPY============*/ -->
-
                             <div class="display-container">
-
                                 <?php
                                 $item = explode('|', $lsDangBai->anh);
                                 if (count($item) > 1) {
@@ -320,18 +305,11 @@
                             </div>
                             <!-- /*=========COPY============*/ -->
                         </div>
-
-
                         <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
-
-
                             <div class="tm-bg-gray tm-video-details">
-
                                 <div class="row mb-4">
-
                                     <h1 class="col-12 tm-text-primary">{{ $lsDangBai->tieu_de }}</h1>
                                 </div>
-
                                 <div class="mb-4">
                                     <h4 class="tm-text-gray-dark mb-3">
                                         Người đăng:
@@ -345,7 +323,6 @@
                                         </a>
                                     </h4>
                                 </div>
-
                                 <div>
                                     <h4 class="tm-text-gray-dark mb-3">Loại tin:
                                         @if($lsDangBai->loai == 0)
@@ -355,14 +332,11 @@
                                         @endif
                                     </h4>
                                 </div>
-
                                 <div class="mb-4 d-flex flex-wrap">
                                     <h4 class="tm-text-gray-dark mb-3">
                                         Thời gian: <span class="tm-text-primary">{{ $lsDangBai->thoi_gian }}</span>
-
                                     </h4>
                                 </div>
-
                                 <div class="mb-4">
                                     <h3 class="tm-text-gray-dark mb-3">Nội dung</h3>
                                     <h2>{{ $lsDangBai->noi_dung }}</h2>
@@ -375,42 +349,29 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="tm-bg-gray pt-1 pb-3 tm-text-gray " style="border: solid;border-width: 1px; border-radius: 0px 0px 10px 10px;">
-
                             <form id="form_input" class="them-binh-luan" method="post" action="{{ route('user-binh-luan') }}" style="padding: 20px;">
                                 @csrf
                                 <h3>BÌNH LUẬN</h3>
                                 <div class=" tm-bg-gray pt-5 pb-3 tm-text-gray" style="border-top: solid; border-bottom: solid; border-width: 3px; ">
-
                                     <div class="form-group">
                                         <input id="noi_dung" class="form-control" style="height: 50px; width: 1000px;display: inline;border-radius:50px;border: solid;border-width: 1px;" name="noi_dung" placeholder="Viết bình luận... " />
                                         <input type=hidden name=bai_dang_id value="{{ $lsDangBai->id }}" />
                                         <button style="display: inline; height: 50px;width: 100px;border-radius:10px;" type=submit class="btn btn-success">Thêm</button>
                                     </div>
-
                                 </div>
-
                             </form>
-
                             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
                             </div>
-
                             <div class="col-xl-8 col-lg-5 col-md-8 col-sm-12" style="overflow-y: auto; width:100%; height: 500px; max-width: 100%;">
                                 <div class="tm-bg-gray tm-video-details">
-
-
                                     @include('user\binh-luan', ['comments' => $lsDangBai->comments, 'bai_dang_id' => $lsDangBai->id])
 
                                 </div>
                             </div>
-
-
                         </div>
-
                     </div>
                     <br>
-
                 </div>
             </div>
             <!-- /page content -->
@@ -458,12 +419,8 @@
     <!-- bootstrap-daterangepicker -->
     <script src="{{ asset('vendors/moment/min/moment.min.js')}}"></script>
     <script src="{{ asset('vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('build/js/custom.min.js')}}"></script>
-
-
-
     <script src="{{ asset('/js/plugins.js') }}"></script>
     <script src="{{ asset('/js/hinh.js') }}"></script>
     <script>
@@ -471,13 +428,10 @@
             $('body').addClass('loaded');
         });
     </script>
-
     <script>
         function quay_lai_trang_truoc() {
             history.back();
         }
     </script>
-
 </body>
-
 </html>
